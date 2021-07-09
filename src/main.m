@@ -13,9 +13,9 @@ disp('THE UNIVERSITY OF ALABAMA')
 %% User Defined Parameters
 
 % Scipt Parameters
-doWeightOptimization = false;
+doWeightOptimization = true;
 runSimulations = true;
-plotResults = true;
+plotResults = false;
 showAnimation = true;
 
 % Simulation Parameters
