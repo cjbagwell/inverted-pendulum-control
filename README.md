@@ -37,17 +37,17 @@ Here, 𝑄 represents the weight of each state in the cost function and 𝑅 is 
 ## Simulations
 The following simulations were run on both control strategy implementations:  
   
-step position input  
+### step position input  
 ![alt text](https://github.com/cjbagwell/inverted-pendulum-control/blob/main/media/PP_vs_QR_Position_Step_Response.gif)  
   
-step velocity input  
+### step velocity input  
 ![alt text](https://github.com/cjbagwell/inverted-pendulum-control/blob/main/media/PP_vs_QR_Velocity_Step_Response.gif)  
   
-ramp position input   
+### ramp position input   
 ![alt text](https://github.com/cjbagwell/inverted-pendulum-control/blob/main/media/PP_vs_QR_Position_Ramp_Response.gif)  
   
-cart velocity disturbance  
+### cart velocity disturbance  
 ![alt text](https://github.com/cjbagwell/inverted-pendulum-control/blob/main/media/PP_vs_QR_Cart_Velocity_Disturbance.gif)  
   
-pendulum velocity disturbanc     
+### pendulum velocity disturbanc     
 ![alt text](https://github.com/cjbagwell/inverted-pendulum-control/blob/main/media/PP_vs_QR_Pendulum_Velocity_Disturbance.gif)  
