@@ -19,10 +19,20 @@ The free response of the cart (with no input actuation) is simulated to verify t
 ![alt text](https://github.com/cjbagwell/inverted-pendulum-control/blob/main/media/inverted-pendulum-free-response.gif)
 
 ## Control Strategies
+The two control strategies implemented in this project, pole placement and linear quadratic regulator, both use the full state feedback architecture.
+A full state feedback system, shown below, calculates the required input actuation based on the entire state of the system.  This control structure is tuned by changing the values of the gain matrix K.  This affects the response of the cart by changing the poles of the system with input actuation.  The only difference between the two controllers in this project is how this gain matrix is calculated.
+![alt text](https://github.com/cjbagwell/inverted-pendulum-control/blob/main/media/Simulink_Model.png)  
 
-### Pole Placement Controller
+### Pole Placement Controller  
+The first controller designed for the system uses the pole placement method and the following ITAE (Integral of Time times Absolute value of Error) optimization equation.  
+![alt text](https://github.com/cjbagwell/inverted-pendulum-control/blob/main/media/ITAE_Optimization_Equation.png)  
+The natural frequency is obtained through the poles of the open loop system.  Solving this equation then gives the desired poles of the controlled system.  The gain of the K matrix is then found using the "place()" function provided in MATLAB.
 
 ### Linear Quadratic Regulator (LQR) Controller
+The second control method explored in the current project implements a linear-quadratic regulator (LQR). LQR controllers are formed by minimizing a cost function, 𝐽 (𝑥), by iteratively solving the Riccati equation (shown below) for 𝑃, given matrices 𝑄 and 𝑅.
+![alt text](https://github.com/cjbagwell/inverted-pendulum-control/blob/main/media/QR_Cost_Function.png)  
+Here, 𝑄 represents the weight of each state in the cost function and 𝑅 is the weights for the system input. The gains for the controller are then found by solving for 𝐾 using the equation below.  
+![alt text](https://github.com/cjbagwell/inverted-pendulum-control/blob/main/media/QR_Gain_Equation.png)  
 
 ## Simulations
 The following simulations were run on both control strategy implementations:  
